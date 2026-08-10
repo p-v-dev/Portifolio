@@ -28,7 +28,7 @@ function App() {
 
         <article className="project">
           <div className="head">
-            <h3>Blog API</h3>
+            <h3>MedaIO</h3>
             <span className="lang">Go</span>
           </div>
           <p>
@@ -66,7 +66,7 @@ function App() {
 
         <article className="project">
           <div className="head">
-            <h3>SaaS in PHP</h3>
+            <h3>Orça Sim</h3>
             <span className="lang">PHP · Laravel</span>
           </div>
           <p>
