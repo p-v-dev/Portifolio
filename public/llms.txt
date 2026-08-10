@@ -1,0 +1,22 @@
+# YOUR NAME
+
+## About
+
+Brazilian developer in the last semester of Análise e Desenvolvimento de Sistemas (ADS), working toward DevOps. I build software and infrastructure by hand — services, pipelines, deployments — and I treat it as craftsmanship: shipping, running, and keeping things alive.
+
+## Selected projects
+
+- Blog API: Go REST API deployed on a PaaS with Docker, shipped through a GitHub Actions CI pipeline. (repo: https://github.com/yourusername)
+- Identity microservice: standalone auth service in Go, using Docker, Postgres, and Redis.
+- SaaS in PHP: Laravel app in progress, planning deployment on AWS with infrastructure as code.
+
+## Tech
+
+- Working with: Go, Docker, Postgres, Redis, GitHub Actions, NestJS, Laravel, React
+- Learning: AWS cloud, Infrastructure as Code, Linux
+
+## Contact
+
+- Email: you@example.com
+- GitHub: https://github.com/yourusername
+- LinkedIn: https://linkedin.com/in/yourname
