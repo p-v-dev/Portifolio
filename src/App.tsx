@@ -7,11 +7,7 @@ function App() {
           I'm doing DevOps for <span className="em">the love of the game</span>.
         </h1>
         <p className="sub">
-          I'm a Brazilian developer in my last semester of University. I'm a
-          intern, and in the hours between I build things — services,
-          pipelines, deployments. Making software is
-          what I actually enjoy. Not just the writing of code: the shipping,
-          the running, the keeping it alive.
+         I'm a Brazilian developer in my last semester of university. Right now, I'm an intern, and in the time I have outside of it, I build things: services, pipelines, deployments, and whatever else I can get my hands on.
         </p>
       </header>
 
@@ -19,17 +15,10 @@ function App() {
         <p className="section-label">About</p>
         <h2>The person behind the window</h2>
         <p>
-          I've been into technology since I was a kid. That is not a career
-          move, it is who I am. For me, building software is craftsmanship,
-          the same way iron smithing or pottery is: you start with raw material
-          and you shape it with care until it is good.
+          I've been into technology since I was a kid. That is not a career move, it is who I am. For me, building software is craftsmanship, the same way blacksmithing or pottery is: you start with raw material and you shape it with care until it is good.
         </p>
         <p>
-          Right now I am an intern, finishing Análise e Desenvolvimento de
-          Sistemas, and building my own projects to go further than the
-          internship allows. I am learning DevOps because it is where software
-          becomes something that lives, infrastructure you can count on, so
-          the product can actually breathe.
+          Right now, I am an intern, finishing Análise e Desenvolvimento de Sistemas, and building my own projects to go further than the internship allows. I am learning DevOps because it is where software becomes something that lives, infrastructure you can count on, so the product can actually breathe
         </p>
       </section>
 
@@ -43,11 +32,7 @@ function App() {
             <span className="lang">Go</span>
           </div>
           <p>
-            A REST API for a blog, deployed on a PaaS using Docker, shipped
-            through a CI pipeline on GitHub Actions. This is the project where
-            I close the full loop: code, test, build, deploy, all automated.
-            I write down what I learn as I go, because deploying is where the
-            real lessons are.
+            A backend for a blog, deployed on a PaaS using Docker, shipped through a CI pipeline on GitHub Actions. This is the project where I close the full loop: code, test, build, deploy, all automated. I write down what I learn as I go, because deploying is where the real lessons are.
           </p>
           <div className="tags">
             <span>Go</span>
@@ -62,15 +47,11 @@ function App() {
 
         <article className="project">
           <div className="head">
-            <h3>Identity microservice</h3>
+            <h3>Identity Service</h3>
             <span className="lang">Go</span>
           </div>
           <p>
-            A standalone authentication service in Go, using Postgres for data
-            and Redis for sessions. Built so I could show
-            my own take on a service that other applications can trust and
-            plug into. It is how I practice microservice thinking: one job,
-            done well.
+           A standalone authentication service in Go, using Postgres for data and Redis for sessions. I built it so I could show my own take on a service that other applications can trust and plug into. It is how I practice microservice thinking: one job, done well.
           </p>
           <div className="tags">
             <span>Go</span>
@@ -89,11 +70,7 @@ function App() {
             <span className="lang">PHP · Laravel</span>
           </div>
           <p>
-            A SaaS I am building with Laravel, not shipped yet. I keep it here
-            honestly as a work in progress. The plan: deploy it on AWS, start
-            small with a single EC2 instance defined with IaC, and grow the
-            infrastructure when the need appears. This is where I am learning
-            the cloud for real.
+           A SaaS I am building with Laravel, not shipped yet. I keep it here honestly as a work in progress. The plan is to deploy it on AWS, starting small with a single EC2 instance defined with IaC, and growing the infrastructure when the need appears. This is where I am learning the cloud for real.
           </p>
           <div className="tags">
             <span>PHP</span>
@@ -142,8 +119,7 @@ function App() {
         <p className="section-label">Contact</p>
         <h2>Let's talk about building</h2>
         <p>
-          If you want to talk about DevOps, infrastructure, or just making
-          software that lasts — my inbox is open. I answer fast.
+          If you want to talk about DevOps, infrastructure, or just making software that lasts, my inbox is open. I answer fast.
         </p>
         <div className="links">
           <a href="mailto:pedro.v.r.brito@gmail.com">email ↗</a>
@@ -152,7 +128,7 @@ function App() {
         </div>
       </section>
 
-      <footer>Made by hand, with the game in mind.</footer>
+      <footer>Made with passion</footer>
     </>
   )
 }
