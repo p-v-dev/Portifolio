@@ -57,7 +57,7 @@ function App() {
             <span>REST API</span>
           </div>
           <div className="links">
-            <a href="https://github.com/" target="_blank" rel="noreferrer">repo ↗</a>
+            <a href="https://github.com/p-v-dev/Gblog" target="_blank" rel="noreferrer">repo ↗</a>
           </div>
         </article>
 
@@ -80,7 +80,7 @@ function App() {
             <span>Redis</span>
           </div>
           <div className="links">
-            <a href="https://github.com/" target="_blank" rel="noreferrer">repo ↗</a>
+            <a href="https://github.com/p-v-dev/indetity-service" target="_blank" rel="noreferrer">repo ↗</a>
           </div>
         </article>
 
@@ -148,9 +148,9 @@ function App() {
           software that lasts — my inbox is open. I answer fast.
         </p>
         <div className="links">
-          <a href="mailto:you@example.com">email ↗</a>
-          <a href="https://github.com/" target="_blank" rel="noreferrer">github ↗</a>
-          <a href="https://linkedin.com/" target="_blank" rel="noreferrer">linkedin ↗</a>
+          <a href="mailto:pedro.v.r.brito@gmail.com">email ↗</a>
+          <a href="https://github.com/p-v-dev" target="_blank" rel="noreferrer">github ↗</a>
+          <a href="https://www.linkedin.com/in/pedro-brito-4a51b9376" target="_blank" rel="noreferrer">linkedin ↗</a>
         </div>
       </section>
 

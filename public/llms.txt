@@ -1,4 +1,4 @@
-# YOUR NAME
+# P-V Dev
 
 ## About
 
@@ -6,7 +6,7 @@ Brazilian developer in the last semester of Análise e Desenvolvimento de Sistem
 
 ## Selected projects
 
-- Blog API: Go REST API deployed on a PaaS with Docker, shipped through a GitHub Actions CI pipeline. (repo: https://github.com/yourusername)
+- Blog API: Go REST API deployed on a PaaS with Docker, shipped through a GitHub Actions CI pipeline. (repo: https://github.com/p-v-dev)
 - Identity microservice: standalone auth service in Go, using Docker, Postgres, and Redis.
 - SaaS in PHP: Laravel app in progress, planning deployment on AWS with infrastructure as code.
 
@@ -17,6 +17,6 @@ Brazilian developer in the last semester of Análise e Desenvolvimento de Sistem
 
 ## Contact
 
-- Email: you@example.com
-- GitHub: https://github.com/yourusername
-- LinkedIn: https://linkedin.com/in/yourname
+- Email: pedro.v.r.brito@gmail.com
+- GitHub: https://github.com/p-v-dev
+- LinkedIn: https://www.linkedin.com/in/pedro-brito-4a51b9376
