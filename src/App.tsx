@@ -7,9 +7,9 @@ function App() {
           I'm doing DevOps for <span className="em">the love of the game</span>.
         </h1>
         <p className="sub">
-          I'm a Brazilian developer in my last semester of ADS. I study, I
+          I'm a Brazilian developer in my last semester of University. I'm a
           intern, and in the hours between I build things — services,
-          pipelines, deployments — because making software with my own hands is
+          pipelines, deployments. Making software is
           what I actually enjoy. Not just the writing of code: the shipping,
           the running, the keeping it alive.
         </p>
@@ -20,8 +20,7 @@ function App() {
         <h2>The person behind the window</h2>
         <p>
           I've been into technology since I was a kid. That is not a career
-          move — it is who I am. This is not the "I just want to make money
-          with tech" kind of story. For me building software is craftsmanship,
+          move, it is who I am. For me, building software is craftsmanship,
           the same way iron smithing or pottery is: you start with raw material
           and you shape it with care until it is good.
         </p>
@@ -29,7 +28,7 @@ function App() {
           Right now I am an intern, finishing Análise e Desenvolvimento de
           Sistemas, and building my own projects to go further than the
           internship allows. I am learning DevOps because it is where software
-          becomes something that lives — infrastructure you can count on, so
+          becomes something that lives, infrastructure you can count on, so
           the product can actually breathe.
         </p>
       </section>
@@ -46,7 +45,7 @@ function App() {
           <p>
             A REST API for a blog, deployed on a PaaS using Docker, shipped
             through a CI pipeline on GitHub Actions. This is the project where
-            I close the full loop: code, test, build, deploy — all automated.
+            I close the full loop: code, test, build, deploy, all automated.
             I write down what I learn as I go, because deploying is where the
             real lessons are.
           </p>
@@ -68,7 +67,7 @@ function App() {
           </div>
           <p>
             A standalone authentication service in Go, using Postgres for data
-            and Redis for sessions. Built outside work so I could show it —
+            and Redis for sessions. Built so I could show
             my own take on a service that other applications can trust and
             plug into. It is how I practice microservice thinking: one job,
             done well.
@@ -117,8 +116,7 @@ function App() {
               <li>Postgres</li>
               <li>Redis</li>
               <li>GitHub Actions</li>
-              <li>NestJS</li>
-              <li>Laravel</li>
+              <li>Node.js</li>
               <li>React</li>
             </ul>
           </div>
@@ -132,7 +130,7 @@ function App() {
             </ul>
             <p className="badge">
               Microsoft · Introduction to DevOps —{' '}
-              <a href="https://learn.microsoft.com/en-us/training/" target="_blank" rel="noreferrer">
+              <a href="https://learn.microsoft.com/api/achievements/share/pt-pt/PedroBrito-9038/CRQQFRS9?sharingId=B018C650433CAD19" target="_blank" rel="noreferrer">
                 badge ↗
               </a>
             </p>
