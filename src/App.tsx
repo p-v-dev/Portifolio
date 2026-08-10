@@ -2,7 +2,7 @@ function App() {
   return (
     <>
       <header className="hero">
-        <span className="tag">Brazilian dev · DevOps in the making</span>
+        <span className="tag"><span className="em">Pedro Brito</span> · Brazilian dev · DevOps in the making</span>
         <h1>
           I'm doing DevOps for <span className="em">the love of the game</span>.
         </h1>
