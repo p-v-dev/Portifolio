@@ -131,6 +131,9 @@ function App() {
           <span className="tag"><span className="em">Pedro Vitor Brito</span> · Backend Developer · São José dos Campos, Brazil</span>
           <h1>I build <span className="em">backend systems</span> that connect the pieces.</h1>
           <p className="sub">Backend developer working with REST APIs, system and ERP integrations, automation, software architecture, and the infrastructure that helps applications run reliably.</p>
+          <div className="hero-actions">
+            <a className="download-link" href="/Portifolio/pedro-vitor-brito-cv.pdf" download>download CV ↓</a>
+          </div>
         </div>
       </header>
 
@@ -165,6 +168,7 @@ function App() {
           <p>If you are working on an API, an integration, or a product that needs a dependable technical foundation, my inbox is open.</p>
           <div className="links">
             <a href="mailto:pedro.v.r.brito@gmail.com">email ↗</a>
+            <a href="/Portifolio/pedro-vitor-brito-cv.pdf" download>download CV ↓</a>
             <ExternalLink href="https://github.com/p-v-dev">github</ExternalLink>
             <ExternalLink href="https://www.linkedin.com/in/pedro-brito-4a51b9376">linkedin</ExternalLink>
           </div>
