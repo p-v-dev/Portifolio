@@ -1,134 +1,177 @@
+import type { ReactNode } from 'react'
+
+interface ProjectLink {
+  label: string
+  href: string
+}
+
+interface Project {
+  name: string
+  category: string
+  description: string
+  details: string[]
+  technologies: string[]
+  repository: string
+  links?: ProjectLink[]
+}
+
+interface TechnologyGroup {
+  name: string
+  items: string[]
+}
+
+const projects: Project[] = [
+  {
+    name: 'MedaIO',
+    category: 'Go REST API',
+    description: 'Content management API for users, posts, tags, and comments.',
+    details: ['JWT authentication', 'Layered backend architecture', 'Swagger/OpenAPI documentation', 'PostgreSQL persistence'],
+    technologies: ['Go', 'Gin', 'GORM', 'PostgreSQL', 'Docker', 'GitHub Actions'],
+    repository: 'https://github.com/p-v-dev/MedaIO',
+  },
+  {
+    name: 'EduQuest',
+    category: 'Academic evaluation platform',
+    description: 'Central API for managing users, questions, exams, attempts, scoring, and rankings.',
+    details: ['JWT and role-based authorization', 'Administrative desktop client implemented', 'Web interface in development', 'Mobile application planned, not implemented'],
+    technologies: ['NestJS', 'TypeScript', 'TypeORM', 'SQL Server', 'C# / .NET', 'Swagger'],
+    repository: 'https://github.com/p-v-dev/PIM-IV',
+  },
+  {
+    name: 'OrçaLink',
+    category: 'Functional Laravel MVP',
+    description: 'Quote management SaaS for freelancers to create, share, and track proposals.',
+    details: ['Public shareable quote links', 'Approval, rejection, and expiration rules', 'Plan-based quote limits', 'Automated test suite'],
+    technologies: ['PHP', 'Laravel', 'Blade', 'Alpine.js', 'SQLite', 'Pest', 'Docker'],
+    repository: 'https://github.com/p-v-dev/OrcaSim',
+  },
+  {
+    name: 'Bundle Valley Co',
+    category: 'Desktop application',
+    description: 'Local companion for tracking Stardew Valley Community Center bundle progress.',
+    details: ['Bundle and item status tracking', 'Room filtering and progress statistics', 'React interface with Tauri shell', 'Rust backend with SQLite persistence'],
+    technologies: ['Tauri', 'Rust', 'React', 'TypeScript', 'SQLite'],
+    repository: 'https://github.com/p-v-dev/BundleValleyCo',
+    links: [{ label: 'Windows release', href: 'https://github.com/p-v-dev/BundleValleyCo/releases/tag/v1' }],
+  },
+  {
+    name: 'PWA - Construtora Mão de Obra LTDA',
+    category: 'Business landing page',
+    description: 'Responsive landing page created for a real-world construction business use case.',
+    details: ['Configurable contact information', 'GitHub Pages deployment', 'GitHub Actions automation', 'Automated checks'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages', 'GitHub Actions'],
+    repository: 'https://github.com/p-v-dev/PWA',
+    links: [{ label: 'Live website', href: 'https://p-v-dev.github.io/PWA/' }],
+  },
+]
+
+const technologyGroups: TechnologyGroup[] = [
+  { name: 'Backend', items: ['Go', 'TypeScript', 'Node.js', 'NestJS', 'Java'] },
+  { name: 'Databases', items: ['PostgreSQL', 'SQL Server', 'SQLite'] },
+  { name: 'Cloud and infrastructure', items: ['Docker', 'GitHub Actions', 'AWS', 'Terraform', 'Linux'] },
+  { name: 'Additional technologies', items: ['Python', 'PHP / Laravel', 'Rust', 'React', 'n8n'] },
+]
+
+function ExternalLink({ href, children }: { href: string; children: ReactNode }) {
+  return <a href={href} target="_blank" rel="noreferrer">{children} ↗</a>
+}
+
+function ProjectCard({ project, index }: { project: Project; index: number }) {
+  return (
+    <article className="project">
+      <div className="head">
+        <h3>{project.name}</h3>
+        <span className="lang">{project.category}</span>
+      </div>
+      <p>{project.description}</p>
+      <ul className="details">
+        {project.details.map(detail => <li key={detail}>{detail}</li>)}
+      </ul>
+      <div className="tags" aria-label={`${project.name} technologies`}>
+        {project.technologies.map(technology => <span key={technology}>{technology}</span>)}
+      </div>
+      <div className="links">
+        <ExternalLink href={project.repository}>repository</ExternalLink>
+        {project.links?.map(link => <ExternalLink key={link.href} href={link.href}>{link.label}</ExternalLink>)}
+      </div>
+      <span className="project-number" aria-hidden>{String(index + 1).padStart(2, '0')}</span>
+    </article>
+  )
+}
+
+function TechnologyGroupView({ group }: { group: TechnologyGroup }) {
+  return (
+    <div className="stack-col">
+      <h3>{group.name}</h3>
+      <ul>
+        {group.items.map(item => <li key={item}>{item}</li>)}
+      </ul>
+    </div>
+  )
+}
+
+function SectionLabel({ children }: { children: ReactNode }) {
+  return <p className="section-label">{children}</p>
+}
+
 function App() {
   return (
     <>
       <header className="hero">
-        <span className="tag"><span className="em">Pedro Brito</span> · Brazilian dev · DevOps in the making</span>
-        <h1>
-          I'm doing DevOps for <span className="em">the love of the game</span>.
-        </h1>
-        <p className="sub">
-         I'm a Brazilian developer in my last semester of university. Right now, I'm an intern, and in the time I have outside of it, I build things: services, pipelines, deployments, and whatever else I can get my hands on.
-        </p>
+        <nav className="site-nav" aria-label="Primary navigation">
+          <a href="#top" className="wordmark">pv.dev</a>
+          <div className="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#technologies">Technologies</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+        <div id="top" className="hero-content">
+          <span className="tag"><span className="em">Pedro Vitor Brito</span> · Backend Developer · São José dos Campos, Brazil</span>
+          <h1>I build <span className="em">backend systems</span> that connect the pieces.</h1>
+          <p className="sub">Backend developer working with REST APIs, system and ERP integrations, automation, software architecture, and the infrastructure that helps applications run reliably.</p>
+        </div>
       </header>
 
-      <section className="about">
-        <p className="section-label">About</p>
-        <h2>The person behind the window</h2>
-        <p>
-          I've been into technology since I was a kid. That is not a career move, it is who I am. For me, building software is craftsmanship, the same way blacksmithing or pottery is: you start with raw material and you shape it with care until it is good.
-        </p>
-        <p>
-          Right now, I am an intern, finishing Análise e Desenvolvimento de Sistemas, and building my own projects to go further than the internship allows. I am learning DevOps because it is where software becomes something that lives, infrastructure you can count on, so the product can actually breathe
-        </p>
-      </section>
+      <main>
+        <section id="about" className="about">
+          <SectionLabel>About</SectionLabel>
+          <h2>The person behind the systems</h2>
+          <p>Software is craftsmanship to me: taking a real problem, shaping the right abstractions, and leaving behind something that can be understood and maintained.</p>
+          <p>My professional work includes custom modules and extensions for Sankhya ERP with Java 8, integrations between applications, APIs, and ERP systems, and the evolution of an initial MVP into a fuller ERP-integrated application. I also build dashboards from application data, automate workflows with n8n, and use GitHub Actions and CI/CD pipelines to keep delivery repeatable.</p>
+          <p>I regularly troubleshoot the practical edges of integrations, including authentication, OAuth, external APIs, and production environments. I am completing an academic degree in Systems Analysis and Development (ADS), while continuing to turn personal and academic projects into working software.</p>
+        </section>
 
-      <section className="projects">
-        <p className="section-label">Selected work</p>
-        <h2>What I build by hand</h2>
+        <section id="projects" className="projects">
+          <SectionLabel>Selected projects</SectionLabel>
+          <h2>Systems built by hand</h2>
+          <div className="project-list">
+            {projects.map((project, index) => <ProjectCard key={project.name} project={project} index={index} />)}
+          </div>
+        </section>
 
-        <article className="project">
-          <div className="head">
-            <h3>MedaIO</h3>
-            <span className="lang">Go</span>
+        <section id="technologies" className="stack">
+          <SectionLabel>Technologies</SectionLabel>
+          <h2>The tools behind the work</h2>
+          <div className="stack-grid">
+            {technologyGroups.map(group => <TechnologyGroupView key={group.name} group={group} />)}
           </div>
-          <p>
-            A backend for a blog, deployed on a PaaS using Docker, shipped through a CI pipeline on GitHub Actions. This is the project where I close the full loop: code, test, build, deploy, all automated. I write down what I learn as I go, because deploying is where the real lessons are.
-          </p>
-          <div className="tags">
-            <span>Go</span>
-            <span>Docker</span>
-            <span>GitHub Actions</span>
-            <span>REST API</span>
-          </div>
+        </section>
+
+        <section id="contact" className="contact">
+          <SectionLabel>Contact</SectionLabel>
+          <h2>Let&apos;s talk about building</h2>
+          <p>If you are working on an API, an integration, or a product that needs a dependable technical foundation, my inbox is open.</p>
           <div className="links">
-            <a href="https://github.com/p-v-dev/Gblog" target="_blank" rel="noreferrer">repo ↗</a>
+            <a href="mailto:pedro.v.r.brito@gmail.com">email ↗</a>
+            <ExternalLink href="https://github.com/p-v-dev">github</ExternalLink>
+            <ExternalLink href="https://www.linkedin.com/in/pedro-brito-4a51b9376">linkedin</ExternalLink>
           </div>
-        </article>
+        </section>
+      </main>
 
-        <article className="project">
-          <div className="head">
-            <h3>Identity Service</h3>
-            <span className="lang">Go</span>
-          </div>
-          <p>
-           A standalone authentication service in Go, using Postgres for data and Redis for sessions. I built it so I could show my own take on a service that other applications can trust and plug into. It is how I practice microservice thinking: one job, done well.
-          </p>
-          <div className="tags">
-            <span>Go</span>
-            <span>Docker</span>
-            <span>Postgres</span>
-            <span>Redis</span>
-          </div>
-          <div className="links">
-            <a href="https://github.com/p-v-dev/indetity-service" target="_blank" rel="noreferrer">repo ↗</a>
-          </div>
-        </article>
-
-        <article className="project">
-          <div className="head">
-            <h3>Orça Sim</h3>
-            <span className="lang">PHP · Laravel</span>
-          </div>
-          <p>
-           A SaaS I am building with Laravel, not shipped yet. I keep it here honestly as a work in progress. The plan is to deploy it on AWS, starting small with a single EC2 instance defined with IaC, and growing the infrastructure when the need appears. This is where I am learning the cloud for real.
-          </p>
-          <div className="tags">
-            <span>PHP</span>
-            <span>Laravel</span>
-            <span>Docker</span>
-            <span>Coming: AWS · IaC</span>
-          </div>
-        </article>
-      </section>
-
-      <section className="stack">
-        <p className="section-label">Stack</p>
-        <h2>What I ship today, what I'm learning</h2>
-        <div className="stack-grid">
-          <div className="stack-col">
-            <h3>Working with</h3>
-            <ul>
-              <li>Go</li>
-              <li>Docker</li>
-              <li>Postgres</li>
-              <li>Redis</li>
-              <li>GitHub Actions</li>
-              <li>Node.js</li>
-              <li>React</li>
-            </ul>
-          </div>
-          <div className="stack-col">
-            <h3>Learning now</h3>
-            <ul>
-              <li>Cloud (AWS)</li>
-              <li>Infrastructure as Code</li>
-              <li>Linux</li>
-              <li>CI/CD deeper</li>
-            </ul>
-            <p className="badge">
-              Microsoft · Introduction to DevOps —{' '}
-              <a href="https://learn.microsoft.com/api/achievements/share/pt-pt/PedroBrito-9038/CRQQFRS9?sharingId=B018C650433CAD19" target="_blank" rel="noreferrer">
-                badge ↗
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="contact">
-        <p className="section-label">Contact</p>
-        <h2>Let's talk about building</h2>
-        <p>
-          If you want to talk about DevOps, infrastructure, or just making software that lasts, my inbox is open. I answer fast.
-        </p>
-        <div className="links">
-          <a href="mailto:pedro.v.r.brito@gmail.com">email ↗</a>
-          <a href="https://github.com/p-v-dev" target="_blank" rel="noreferrer">github ↗</a>
-          <a href="https://www.linkedin.com/in/pedro-brito-4a51b9376" target="_blank" rel="noreferrer">linkedin ↗</a>
-        </div>
-      </section>
-
-      <footer>Made with passion</footer>
+      <footer>Built with care by Pedro Vitor Brito · 2026</footer>
     </>
   )
 }

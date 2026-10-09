@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Vite + React 19 + TypeScript single-page app (no router, no state lib, no tests). Entry: `src/main.tsx` -> `src/App.tsx`. Not a git repo.
+Vite + React 19 + TypeScript single-page portfolio (no router, no state lib, no dedicated test framework). Entry: `src/main.tsx` -> `src/App.tsx`. The site is deployed to GitHub Pages under `/Portifolio/`.
 
 ## Commands
 
@@ -15,4 +15,4 @@ Vite + React 19 + TypeScript single-page app (no router, no state lib, no tests)
 - **`erasableSyntaxOnly`** in `tsconfig.app.json`: no TS enums, namespaces, or parameter properties - use plain types/const objects.
 - **`verbatimModuleSyntax`**: type-only imports must use `import type`.
 - `allowImportingTsExtensions`: source files import with explicit `.tsx`/`.ts` extensions (e.g. `./App.tsx`).
-- App is currently the untouched Vite starter template - the "portfolio" content is still to be built.
+- Portfolio content lives in typed constants and reusable local components in `src/App.tsx`.
