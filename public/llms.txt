@@ -1,22 +1,38 @@
-# Pedro Brito
+# Pedro Vitor Brito
 
 ## About
 
-Brazilian developer in the last semester of Análise e Desenvolvimento de Sistemas (ADS), working toward DevOps. I build software and infrastructure by hand — services, pipelines, deployments — and I treat it as craftsmanship: shipping, running, and keeping things alive.
+Backend Developer based in São José dos Campos, Brazil. I build APIs, integrate applications and ERP systems, automate workflows, and work with the infrastructure and CI/CD practices that help software run reliably.
+
+## Engineering focus
+
+- Backend development and REST APIs
+- Application and ERP integrations
+- Software architecture and business rules
+- Workflow automation with n8n
+- Cloud infrastructure and CI/CD
+- Troubleshooting authentication, OAuth, external APIs, and production integrations
 
 ## Selected projects
 
-- Blog API: Go REST API deployed on a PaaS with Docker, shipped through a GitHub Actions CI pipeline. (repo: https://github.com/p-v-dev)
-- Identity microservice: standalone auth service in Go, using Docker, Postgres, and Redis.
-- SaaS in PHP: Laravel app in progress, planning deployment on AWS with infrastructure as code.
+- MedaIO: Go REST API for content management with JWT authentication, PostgreSQL, Docker, Swagger/OpenAPI, and GitHub Actions CI. https://github.com/p-v-dev/MedaIO
+- EduQuest: academic evaluation platform with a NestJS API, role-based access, exams, attempts, scoring, rankings, and an implemented administrative desktop client. The web client is in development and mobile is planned. https://github.com/p-v-dev/PIM-IV
+- OrçaLink: functional Laravel MVP for creating, sharing, and managing freelancer quotes with explicit status rules, plan limits, and automated tests. https://github.com/p-v-dev/OrcaSim
+- Bundle Valley Co: Tauri desktop app with React, Rust, and SQLite for tracking Stardew Valley Community Center bundles. https://github.com/p-v-dev/BundleValleyCo
+- PWA - Construtora Mão de Obra LTDA: responsive business landing page published on GitHub Pages with GitHub Actions automation. https://github.com/p-v-dev/PWA
+- Bundle Valley Co release: https://github.com/p-v-dev/BundleValleyCo/releases/tag/v1
+- PWA live website: https://p-v-dev.github.io/PWA/
 
-## Tech
+## Technologies
 
-- Working with: Go, Docker, Postgres, Redis, GitHub Actions, NestJS, Laravel, React
-- Learning: AWS cloud, Infrastructure as Code, Linux
+- Backend: Go, TypeScript, Node.js, NestJS, Java
+- Databases: PostgreSQL, SQL Server, SQLite
+- Cloud and infrastructure: Docker, GitHub Actions, AWS, Terraform, Linux
+- Additional technologies: Python, PHP / Laravel, Rust, React, n8n
 
 ## Contact
 
-- Email: pedro.v.r.brito@gmail.com
+- Portfolio: https://p-v-dev.github.io/Portifolio/
 - GitHub: https://github.com/p-v-dev
 - LinkedIn: https://www.linkedin.com/in/pedro-brito-4a51b9376
+- Email: pedro.v.r.brito@gmail.com
