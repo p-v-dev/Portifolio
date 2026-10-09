@@ -94,6 +94,39 @@ section {
 
 .hero {
   margin-top: 0;
+  padding: 0 0 2rem;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.wordmark {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--ink-mut);
+}
+
+.hero-content {
   padding: 3rem 0 2rem;
 }
 
@@ -164,6 +197,15 @@ section h2 {
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+.project-number {
+  position: absolute;
+  right: 1.6rem;
+  bottom: 1.2rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--brass-line);
+}
+
 .project + .project {
   margin-top: 1.1rem;
 }
@@ -203,6 +245,19 @@ section h2 {
   font-size: 0.98rem;
 }
 
+.project .details {
+  display: grid;
+  gap: 0.35rem;
+  margin: 1rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--ink-mut);
+  font-size: 0.9rem;
+}
+
+.project .details li::marker {
+  color: var(--brass);
+}
+
 .project .tags {
   display: flex;
   flex-wrap: wrap;
@@ -226,6 +281,11 @@ section h2 {
   margin-top: 1rem;
   font-family: var(--mono);
   font-size: 0.82rem;
+}
+
+.project .links a {
+  display: inline-block;
+  min-height: 2rem;
 }
 
 /* ---------- stack ---------- */
@@ -317,6 +377,22 @@ footer {
 
   section {
     margin-top: 5rem;
+  }
+
+  .site-nav {
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 0.55rem 0.8rem;
+  }
+
+  .hero-content {
+    padding-top: 2.4rem;
+  }
+
+  .hero .tag {
+    line-height: 1.5;
   }
 
   .stack-grid {
